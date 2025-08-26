@@ -1,0 +1,20 @@
+.scroll-reveal {
+  /* margin: top right bottom left */
+  margin: 60px 0 20px 0; /* more space at the top, normal space at bottom */
+}
+
+.scroll-reveal-text {
+  margin-top: 29px;
+  /* responsive font sizing */
+  font-size: clamp(1.2rem, 3vw, 2.2rem);
+  /* 1.2rem = minimum size (~19px) */
+  /* 3vw = preferred size (scales with viewport width) */
+  /* 2.2rem = maximum size (~35px) */
+
+  line-height: 1.5; /* keeps good readability */
+  font-weight: 600; /* semi-bold */
+}
+
+.word {
+  display: inline-block; /* keeps each word inline but allows transforms/animations */
+}

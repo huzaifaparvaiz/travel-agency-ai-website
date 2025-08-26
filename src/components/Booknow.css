@@ -1,0 +1,110 @@
+/* Page + background */
+.parent {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.aurora-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0; /* stays behind everything */
+  pointer-events: none;
+}
+
+/* Card wrapper so it layers above aurora */
+.form-wrap {
+  position: relative;
+  z-index: 1;
+  width: min(720px, 92vw);
+}
+
+/* Card */
+.form-box {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Brand row: logo left, name right; centered above the title */
+.mainname {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 6px; /* sits directly above "Sign up" */
+}
+
+.logobooknow {
+  margin-top: 8px;
+  margin-right: -20px;
+  width: 60px;
+  height: 60px;
+}
+
+.sitename {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Title */
+.heading {
+  text-align: center;
+  color: #fff;
+  margin: 6px 0 16px;
+}
+
+/* Form */
+.form {
+  display: grid;
+  gap: 12px;
+}
+
+.form label {
+  color: #fff;
+  font-weight: 600;
+}
+
+.form input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  outline: none;
+}
+
+.form button {
+  margin-top: 6px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: none;
+  background: #ffffff;
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Larger screens: scale up a bit, still stacked vertically */
+@media (min-width: 1024px) {
+  .form-wrap {
+    width: 560px;
+  }
+  .logo {
+    width: 48px;
+    height: 48px;
+  }
+  .sitename {
+    font-size: 32px;
+  }
+}

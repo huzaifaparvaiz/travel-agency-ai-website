@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Outfit:wght@100..900&display=swap");
+
+.heading {
+  font-weight: bolder;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  color: white;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}

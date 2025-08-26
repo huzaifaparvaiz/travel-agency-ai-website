@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+/* Page defaults */
+body {
+  background-color: #0a0a0a;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Intro container (2-column layout) */
+.intro {
+  margin-top: -600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  gap: 40px;
+}
+
+/* Text side */
+.text-section {
+  flex: 1;
+  max-width: 600px;
+}
+
+.heading-intro {
+  font-size: 73px;
+  font-weight: 900;
+  margin-bottom: 50px;
+  filter: blur(5px); /* start blurred */
+  opacity: 0; /* start invisible */
+  animation: reveal 2s forwards;
+}
+
+@keyframes reveal {
+  to {
+    filter: blur(0); /* end clear */
+    opacity: 1; /* end visible */
+  }
+}
+
+.paragraph-intro {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* Image side */
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* 🔹 Responsive layout */
+@media (max-width: 900px) {
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-section {
+    max-width: 100%;
+  }
+
+  .intro-img {
+    margin-top: 20px;
+    max-width: 80%;
+  }
+}

@@ -1,0 +1,59 @@
+/* Heading */
+.destination-heading-container {
+  margin-top: -150px;
+  margin-bottom: -40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  background: transparent;
+  text-align: center;
+}
+
+.heading-destination {
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  font-weight: bold;
+  color: white;
+}
+
+/* Grid for destinations */
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+/* Card for each destination */
+.destination-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.destination-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.destination-name {
+  margin-top: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .heading-destination {
+    font-size: clamp(2rem, 5vw, 4rem);
+  }
+  .destination-name {
+    font-size: 1rem;
+  }
+}

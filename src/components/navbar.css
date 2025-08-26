@@ -1,0 +1,94 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* logo+name left, items right */
+  align-items: center;
+  padding: 0.5rem 1rem;
+  position: relative;
+  z-index: 999;
+  background: transparent;
+}
+
+.logonav {
+  margin-top: 9px;
+  margin-right: -15px;
+  height: 60px;
+  width: 60px;
+}
+
+.websitename {
+  margin-top: 10px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* small spacing between logo + text */
+  font-family: "Outfit", sans-serif;
+  font-weight: bold;
+}
+
+.websitename h1 {
+  font-size: 1.5rem;
+}
+
+.navbar-items {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.15); /* semi-transparent white */
+  backdrop-filter: blur(10px); /* blur background behind */
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: #fff; /* optional text color */
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  gap: 1.5rem; /* reduced from 50px → keeps items tighter */
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .navbar-items {
+    gap: 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center; /* center everything on mobile */
+  }
+
+  .navbar-items {
+    flex-direction: column;
+    margin-top: 0.8rem;
+    gap: 0.8rem;
+  }
+}
+
+/* Very Small Screens */
+@media (max-width: 480px) {
+  .logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .websitename h1 {
+    font-size: 1.2rem;
+  }
+
+  .navbar-items {
+    font-size: 0.9rem;
+  }
+}
+.nav-link {
+  color: white; /* or whatever color you want */
+  text-decoration: none; /* removes underline */
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f5d396; /* optional: change color on hover */
+}
